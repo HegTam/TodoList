@@ -1,0 +1,90 @@
+$primary: #11998e
+$secondary: #38ef7d
+$gray: #9b9b9b
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: calc(0.8rem + 0.8vh)
+
+body
+    height: 100vh
+    background: linear-gradient(308deg, rgba(34,58,64,1) 0%, rgba(15,29,75,1) 30%, rgba(6,15,80,1) 86%, rgba(46,34,64,1) 100%)
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 5vw
+
+main
+    background: white
+    font-family: 'Roboto', sans-serif
+    min-height: 90%
+    max-width: 500px
+    margin: 5% auto
+    padding: 10px
+    text-align: center
+
+    h1
+
+        font-size: 3em
+        color: tomato
+        background-color: $secondary
+
+    form
+        width: 100%
+        padding: 10px 20px
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        position: relative
+
+        input[type=text]
+            width: 100%
+            border-style: none
+            border-bottom: 2px solid $gray
+            height: 25px
+            color: $gray
+            transition: 5s
+
+            &:focus
+                border-image: linear-gradient(to right, $primary,$secondary)
+                border-image-slice: 1
+
+            &::placeholder
+                color: red
+
+            &:required,&:invalid
+                box-shadow: none
+
+        label
+            position: absolute
+            left: 0
+            color: $gray
+
+        button
+            border: none
+            background: none
+            margin: 5px
+            cursor: pointer
+
+    ul
+        list-style: none
+        text-align: left
+
+        li
+            margin: 5px
+            padding: 5px
+            font-size: 0.5rem
+            background-color: lightgrey
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+            &:nth-child(even)
+                background: grey
+
+
+    .done
+        text-decoration: line-through

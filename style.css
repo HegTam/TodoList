@@ -23,18 +23,21 @@ main {
   min-height: 90%;
   max-width: 500px;
   margin: 5% auto;
-  padding: 10px;
   text-align: center;
+  border-radius: 20px 20px 20px 20px;
+  overflow: hidden;
 }
 
 main h1 {
   font-size: 3em;
-  color: tomato;
-  background-color: #38ef7d;
+  color: white;
+  font-family: 'Elsie', cursive;
+  background-color: #14B379;
 }
 
 main form {
   width: 100%;
+  margin: 10px;
   padding: 10px 20px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -53,9 +56,7 @@ main form input[type=text] {
   border-style: none;
   border-bottom: 2px solid #9b9b9b;
   height: 25px;
-  color: #9b9b9b;
-  -webkit-transition: 5s;
-  transition: 5s;
+  color: #11998e;
 }
 
 main form input[type=text]:focus {
@@ -63,22 +64,15 @@ main form input[type=text]:focus {
      border-image: -webkit-gradient(linear, left top, right top, from(#11998e), to(#38ef7d));
      border-image: linear-gradient(to right, #11998e, #38ef7d);
   border-image-slice: 1;
+  color: #11998e;
 }
 
-main form input[type=text]::-webkit-input-placeholder {
-  color: red;
-}
-
-main form input[type=text]:-ms-input-placeholder {
-  color: red;
-}
-
-main form input[type=text]::-ms-input-placeholder {
-  color: red;
-}
-
-main form input[type=text]::placeholder {
-  color: red;
+main form input[type=text]:focus + label {
+  color: #11998e;
+  -webkit-transform: translate3d(-12px, -20px, 0) scale(0.75);
+          transform: translate3d(-12px, -20px, 0) scale(0.75);
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
 }
 
 main form input[type=text]:required, main form input[type=text]:invalid {
@@ -88,8 +82,11 @@ main form input[type=text]:required, main form input[type=text]:invalid {
 
 main form label {
   position: absolute;
-  left: 0;
-  color: #9b9b9b;
+  left: 20px;
+  color: rgba(155, 155, 155, 0.5);
+  pointer-events: none;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
 }
 
 main form button {
@@ -106,9 +103,10 @@ main ul {
 
 main ul li {
   margin: 5px;
-  padding: 5px;
-  font-size: 0.5rem;
-  background-color: lightgrey;
+  padding: 5px 15px;
+  font-size: 0.8rem;
+  color: #555555;
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,13 +116,23 @@ main ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: default;
 }
 
 main ul li:nth-child(even) {
-  background: grey;
+  background: #d6d6d6;
+}
+
+main ul li img {
+  cursor: pointer;
 }
 
 main .done {
   text-decoration: line-through;
+  background-color: #d16e5c;
+}
+
+main .done:nth-child(even) {
+  background: #d16e5c;
 }
 /*# sourceMappingURL=style.css.map */

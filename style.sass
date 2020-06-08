@@ -23,17 +23,20 @@ main
     min-height: 90%
     max-width: 500px
     margin: 5% auto
-    padding: 10px
     text-align: center
+    border-radius: 20px 20px 20px 20px
+    overflow: hidden
 
     h1
 
         font-size: 3em
-        color: tomato
-        background-color: $secondary
+        color: white
+        font-family: 'Elsie', cursive
+        background-color: #14B379
 
     form
         width: 100%
+        margin: 10px
         padding: 10px 20px
         display: inline-flex
         justify-content: center
@@ -45,23 +48,26 @@ main
             border-style: none
             border-bottom: 2px solid $gray
             height: 25px
-            color: $gray
-            transition: 5s
+            color: $primary
 
             &:focus
                 border-image: linear-gradient(to right, $primary,$secondary)
                 border-image-slice: 1
-
-            &::placeholder
-                color: red
+                color: $primary
+                + label
+                    color: $primary
+                    transform: translate3d(-12px,-20px,0) scale(.75)
+                    transition: all .5s ease-out
 
             &:required,&:invalid
                 box-shadow: none
 
         label
             position: absolute
-            left: 0
-            color: $gray
+            left: 20px
+            color: rgba($gray, .5)
+            pointer-events: none
+            transition: all .5s ease-out
 
         button
             border: none
@@ -75,16 +81,23 @@ main
 
         li
             margin: 5px
-            padding: 5px
-            font-size: 0.5rem
-            background-color: lightgrey
+            padding: 5px 15px
+            font-size: 0.8rem
+            color: #555555
+            background-color: white
             display: flex
             justify-content: space-between
             align-items: center
+            cursor: default
 
             &:nth-child(even)
-                background: grey
+                background: #d6d6d6
 
+            img
+                cursor: pointer
 
     .done
         text-decoration: line-through
+        background-color: #d16e5c
+        &:nth-child(even)
+                background: #d16e5c

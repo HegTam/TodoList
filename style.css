@@ -65,6 +65,7 @@ main form input[type=text]:focus {
      border-image: linear-gradient(to right, #11998e, #38ef7d);
   border-image-slice: 1;
   color: #11998e;
+  outline: none;
 }
 
 main form input[type=text]:focus + label {
